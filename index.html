@@ -2,43 +2,53 @@
 <head>
   <meta charset="utf-8">  
   
-  
+  <link rel="shortcut icon" href="C:\Users\MIT 182\Desktop\MLMW\Flag_Myanmar.jpg" type="image/x-icon">
   <title>UEHRD-crowdfunding</title>
-  <!--<link rel="icon" href="Flag_Myanmar.jpg" type="image/jpg">
-  
-  <title><img src = "Flag_Myanmar.jpg"/>UEHRD-Crowdfunding</title>-->
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!--<link rel="icon" type="image/x-icon" href="favicon.ico">-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
   <app-root></app-root>
-
+<script>
+function myFunction() {
+    var selector = document.getElementById('amount');
+    var value = selector[selector.selectedIndex].value;
+            if ( value === "1,000.00" ) {
+				var url = "https://t.2c2p.com/qp/1D80";
+				window.open(url);
+            }
+			if ( value === "5,000.00" ) {
+				var url = "https://t.2c2p.com/qp/1D7Z";
+				window.open(url);
+            }
+			if ( value === "10,000.00" ) {
+				var url = "https://t.2c2p.com/qp/1D82";
+				window.open(url);
+            }
+			if ( value === "100,000.00" ) {
+				var url = "https://t.2c2p.com/qp/1D81";
+				window.open(url);
+            }
+}
+</script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
   
   <div class="container" >
   <form style="padding-top: 30px;">
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
+	<div class="form-group row"><h3>UEHRD</h3></div>
+	<div class="form-group row"><h5>United Enterprise for Humanitarian Assistance, Resettlement and Development in Rakhine</h5></div>
+	<ul class="nav nav-tabs" id="myTab" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
           Home
         </a>
       </li>
-      <!--<li class="nav-item">
-        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
-          Activities
-        </a>
-      </li>-->
       <li class="nav-item" style="padding-top: 10px;padding-left: 10px;">
-        <!--<a class="nav-link" id="employment-tab" data-toggle="tab" href="#employment" role="tab" aria-controls="employment" aria-selected="false">
-          
-
-        </a>-->
 		<a href="http://rakhine.unionenterprise.org/" target="_blank" style="color:black;text-decoration: none;">About Us</a>
       </li>
 
@@ -48,59 +58,118 @@
       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
         <div class="container-fluid">
           <p>
-            <h3>UEHRD</h3>
             <p>
-              <h5>United Enterprise for Humanitarian Assistance, Resettlement and Development in Rakhine</h5>
-
               <p>
                 <h5>General Donation</h5>
-                <ul>   
-				  <li> <div class="form-group row"><div class="col-md-4">UEHRD Donation 1,000.00 MMK</div><div class="col-md-1"></div><div class="col-md-2"><button style="background-color:#ECB22E; border-radius: 12px;border-color:  #ECB22E;"><a href="https://t.2c2p.com/qp/1D80" target="_blank" style="color:black;text-decoration: none;font-weight:bold;">Donate</a></button></div></div></li>
-                  <li><div class="form-group row"><div class="col-md-4">UEHRD Donation 5,000.00 MMK</div><div class="col-md-1"></div><div class="col-md-2"><button style="background-color:#ECB22E; border-radius: 12px;border-color:  #ECB22E;"><a href="https://t.2c2p.com/qp/1D7Z" target="_blank" style="color:black;text-decoration: none;font-weight:bold;">Donate</a></button></div></div></li>
-                  <li><div class="form-group row"><div class="col-md-4">UEHRD Donation 10,000.00 MMK</div><div class="col-md-1"></div><div class="col-md-2"><button style="background-color:#ECB22E; border-radius: 12px;border-color:  #ECB22E;"><a href="https://t.2c2p.com/qp/1D82" target="_blank" style="color:black;text-decoration: none;font-weight:bold;">Donate</a></button></div></div></li>
-                  <li><div class="form-group row"><div class="col-md-4">UEHRD Donation 100,000.00 MMK</div><div class="col-md-1"></div><div class="col-md-2"><button style="background-color:#ECB22E; border-radius: 12px;border-color:  #ECB22E;"><a href="https://t.2c2p.com/qp/1D81" target="_blank" style="color:black;text-decoration: none;font-weight:bold;">Donate</a></button></div></div></li>
-                </ul>
+				<div class="form-group row">				
+					<div class="col-sm-2" style="padding-bottom: 10px;">
+						<select class="form-control form-control-sm">
+							<option>MMK</option>					
+							
+						</select>
+					</div>
+					<div class="col-sm-2" style="padding-bottom: 10px;">
+						<select class="form-control form-control-sm" id="amount">
+							<option value="1,000.00">1,000.00</option>					
+							<option value="5,000.00">5,000.00</option>				
+							<option value="10,000.00">10,000.00</option>				
+							<option value="100,000.00">100,000.00</option>
+						</select>
+					</div>
+					<div class="col-sm-4">
+						<div class="form-group">
+							<button type="button" class="btn btn-info" style="background-color:#ECB22E;padding-top: 1px;" onclick="myFunction()">Donate</button>
+						</div>
+					</div>
+				</div>
                 <p>
                   <h5>Bank Accounts for Donations</h5>
-               <div class="form-group row">
-				<div class="col-sm-2">
-                  <ul style="list-style-type:none">
-					<li><b>Bank</b></li>
-					<li>KBZ Bank</li>
-					<li>CB Bank	</li>
-					<li>AYA Bank</li>
-					<li>MEB Bank(NPT)</li>
-                  </ul>
-                </div>
-				<div class="col-sm-3">
-                  <ul style="list-style-type:none">
-					<li><b>Account Number</b></li>
-					<li>034 103 034 017 85901</li>
-					<li>009 310 040 000 0183</li>
-					<li>000 110 501 002 2168</li>
-					<li>CF-003638</li>
-                  </ul>
-                </div>
-				<div class="col-sm-2">
-                  <ul style="list-style-type:none">
-					<li><b>SWIFT</b></li>
-					<li>KBZBMMMY</li>
-					<li>CPOBMMMY</li>
-					<li>AYABMMY	</li>
-					<li>MYEBMMMY</li>
-                  </ul>
-                </div>
-				<div class="col-sm-4">
-                  <ul style="list-style-type:none">
-					<li><b>Account Number (Foreign Currency)</b></li>
-					<li>206 10920601542701</li>
-					<li>009 310 120 000 1007</li>
-					<li>000 110 503 000 0135</li>
-					<li>EDU-400001</li>
-                  </ul>
-                </div>
-			</div>
-
+				  <div class="form-group row">
+					<div class="col-sm-6" style="padding-bottom: 50px;">
+					<table>
+						<tr>
+							<td>Bank:</td>
+							<td>KBZ Bank</td>
+						</tr>
+						<tr>
+							<td>Account Number:</td>
+							<td>034 103 034 017 85901</td>
+						</tr>
+						<tr>
+							<td>SWIFT:</td>
+							<td>KBZBMMMY</td>
+						</tr>
+						<tr>
+							<td>Account Number (Foreign Currency):&nbsp;</td>
+							<td>206 109 206 015 42701</td>
+						</tr>
+					</table>
+					</div>
+					<div class="col-sm-6" style="padding-bottom: 50px;">
+					<table>
+						<tr>
+							<td>Bank:</td>
+							<td>CB Bank</td>
+						</tr>
+						<tr>
+							<td>Account Number:</td>
+							<td>009 310 040 000 0183</td>
+						</tr>
+						<tr>
+							<td>SWIFT:</td>
+							<td>CPOBMMMY</td>
+						</tr>
+						<tr>
+							<td>Account Number (Foreign Currency):&nbsp;</td>
+							<td>009 310 120 000 1007</td>
+						</tr>
+					</table>
+					</div>
+				  </div>
+				  
+				  <div class="form-group row">
+					<div class="col-sm-6" style="padding-bottom: 50px;">
+					<table>
+						<tr>
+							<td>Bank:</td>
+							<td>AYA Bank</td>
+						</tr>
+						<tr>
+							<td>Account Number:</td>
+							<td>000 110 501 002 2168</td>
+						</tr>
+						<tr>
+							<td>SWIFT:</td>
+							<td>AYABMMY</td>
+						</tr>
+						<tr>
+							<td>Account Number (Foreign Currency):&nbsp;</td>
+							<td>000 110 503 000 0135</td>
+						</tr>
+					</table>
+					</div>
+					<div class="col-sm-6" style="padding-bottom: 50px;">
+					<table>
+						<tr>
+							<td>Bank:</td>
+							<td>MEB Bank(NPT)</td>
+						</tr>
+						<tr>
+							<td>Account Number:</td>
+							<td>CF-003638</td>
+						</tr>
+						<tr>
+							<td>SWIFT:</td>
+							<td>MYEBMMMY</td>
+						</tr>
+						<tr>
+							<td>Account Number (Foreign Currency):&nbsp;</td>
+							<td>EDU-400001</td>
+						</tr>
+					</table>
+					</div>
+				  </div>
+					
         </div>
       </div>
 
