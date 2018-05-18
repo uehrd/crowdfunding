@@ -12,7 +12,8 @@
 </head>
 <body>
   <app-root></app-root>
-<script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
 function myFunction() {
     var selector = document.getElementById('amount');
     var value = selector[selector.selectedIndex].value;
@@ -32,50 +33,79 @@ function myFunction() {
 				var url = "https://t.2c2p.com/qp/1D81";
 				window.open(url);
             }
+			if ( value === "100.00" ) {
+				var url = "https://goo.gl/AtDFnk";
+				window.open(url);
+            }
+			if ( value === "50.00" ) {
+				var url = "https://goo.gl/qr6vX6";
+				window.open(url);
+            }
+			if ( value === "10.00" ) {
+				var url = "https://goo.gl/oKQCjE";
+				window.open(url);
+            }
 }
+$(document).ready(function () {
+$("#amount").html("<option value='1,000.00'>1,000.00</option><option value='5,000.00'>5,000.00</option><option value='10,000.00'>10,000.00</option>	<option value='100,000.00'>100,000.00</option>");
+    $("#mmk").change(function () {
+        var val = $(this).val();
+        if (val == "mmmk") {
+            $("#amount").html("<option value='1,000.00'>1,000.00</option><option value='5,000.00'>5,000.00</option><option value='10,000.00'>10,000.00</option>	<option value='100,000.00'>100,000.00</option>");
+        } else if (val == "usd") {
+            $("#amount").html("<option value='100.00'>100.00</option><option value='50.00'>50.00</option><option value='10.00'>10.00</option>");
+        }
+    });
+});
 </script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
   
   <div class="container" >
-  <form style="padding-top: 30px;">
-	<div class="form-group row"><h3>UEHRD</h3></div>
-	<div class="form-group row"><h5>United Enterprise for Humanitarian Assistance, Resettlement and Development in Rakhine</h5></div>
+  <form style="padding-top: 10px;">
+	<div class="form-group"><h3 style="margin-bottom: 0px;">UEHRD</h3>
+	<h7>United Enterprise for Humanitarian Assistance, Resettlement and Development</h7></div>
 	<ul class="nav nav-tabs" id="myTab" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
           Home
         </a>
+      </li>      
+	  <li class="nav-item">
+        <a class="nav-link" id="aboutus-tab" data-toggle="tab" href="#aboutus" role="tab" aria-controls="aboutus" aria-selected="true">
+          About Us
+        </a>
       </li>
-      <li class="nav-item" style="padding-top: 10px;padding-left: 10px;">
+      <!--<li class="nav-item" style="padding-top: 10px;padding-left: 10px;">
 		<a href="http://rakhine.unionenterprise.org/" target="_blank" style="color:black;text-decoration: none;">About Us</a>
-      </li>
-
+      </li>-->
     </ul>
-    <br />
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
         <div class="container-fluid">
           <p>
             <p>
               <p>
-                <h5>General Donation</h5>
+                <h5>Rakhine Donation</h5>
 				<div class="form-group row">				
 					<div class="col-sm-2" style="padding-bottom: 10px;">
-						<select class="form-control form-control-sm">
-							<option>MMK</option>					
-							
+						<select class="form-control form-control-sm" id="mmk">
+							<option value="mmmk">MMK</option>					
+							<option value="usd">USD</option>	
 						</select>
 					</div>
 					<div class="col-sm-2" style="padding-bottom: 10px;">
 						<select class="form-control form-control-sm" id="amount">
-							<option value="1,000.00">1,000.00</option>					
-							<option value="5,000.00">5,000.00</option>				
-							<option value="10,000.00">10,000.00</option>				
-							<option value="100,000.00">100,000.00</option>
+							
 						</select>
-					</div>
+					</div>					
+<!--						<select class="form-control form-control-sm" id="usd">
+							<option value="100.00">100.00</option>					
+							<option value="50.00">50.00</option>						
+							<option value="10.00">10.00</option>
+						</select>
+					</div>-->
 					<div class="col-sm-4">
 						<div class="form-group">
 							<button type="button" class="btn btn-info" style="background-color:#ECB22E;padding-top: 1px;" onclick="myFunction()">Donate</button>
@@ -85,39 +115,46 @@ function myFunction() {
                 <p>
                   <h5>Bank Accounts for Donations</h5>
 				  <div class="form-group row">
-					<div class="col-sm-6" >
+					<div class="col-sm-6">
 					<table>
 						<tr>
-							<td colspan=2>Bank : KBZ Bank</td>
+							<td>Bank :</td>
+							<td>KBZ Bank</td>
 						</tr>
 						<tr>
-							<td colspan=2>Account Number : 034 103 034 017 85901</td>
+							<td>Account Number :</td>
+							<td style="white-space:nowrap;">034 103 034 017 85901</td>
 						</tr>
 						<tr>
-							<td colspan=2>SWIFT : KBZBMMMY</td>
+							<td>SWIFT :</td>
+							<td>KBZBMMMY</td>
 						</tr>
 						<tr>
-							<td>Account Number (Foreign Currency) :</td> <td> 20610920601542701</td>
+							<td>Account Number (Foreign Currency) :&nbsp;</td>
+							<td style="white-space:nowrap;">206 109 206 015 42701</td>
 						</tr>
 						<tr>
 							<td colspan=2><hr/></td>
 						</tr>
 					</table>
-
 					</div>
-					<div class="col-sm-6" >
+					<div class="col-sm-6">
 					<table>
 						<tr>
-							<td colspan=2>Bank : CB Bank</td>
+							<td>Bank :</td>
+							<td>CB Bank</td>
 						</tr>
 						<tr>
-							<td colspan=2>Account Number : 009 310 040 000 0183</td>
+							<td>Account Number :</td>
+							<td style="white-space:nowrap;">009 310 040 000 0183</td>
 						</tr>
 						<tr>
-							<td colspan=2>SWIFT : CPOBMMMY</td>
+							<td>SWIFT :</td>
+							<td>CPOBMMMY</td>
 						</tr>
 						<tr>
-							<td>Account Number (Foreign Currency) : </td><td> 0093101200001007</td>
+							<td>Account Number (Foreign Currency) :&nbsp;</td>
+							<td style="white-space:nowrap;">009 310 120 000 1007&nbsp;&nbsp;</td>
 						</tr>
 						<tr>
 							<td colspan=2><hr/></td>
@@ -127,38 +164,46 @@ function myFunction() {
 				  </div>
 				  
 				  <div class="form-group row">
-					<div class="col-sm-6" >
+					<div class="col-sm-6">
 					<table>
 						<tr>
-							<td colspan=2>Bank : AYA Bank</td>
+							<td>Bank :</td>
+							<td>AYA Bank</td>
 						</tr>
 						<tr>
-							<td colspan=2>Account Number : 000 110 501 002 2168</td>
+							<td style="white-space:nowrap;">Account Number :</td>
+							<td style="white-space:nowrap;">000 110 501 002 2168</td>
 						</tr>
 						<tr>
-							<td colspan=2>SWIFT : AYABMMY</td>
+							<td>SWIFT :</td>
+							<td style="white-space:nowrap;">AYABMMY</td>
 						</tr>
 						<tr>
-							<td>Account Number (Foreign Currency) : </td><td> 0001105030000135</td>
+							<td >Account Number (Foreign Currency) :&nbsp;</td>
+							<td style="white-space:nowrap;">000 110 503 000 0135&nbsp;&nbsp;</td>
 						</tr>
 						<tr>
 							<td colspan=2><hr/></td>
 						</tr>
 					</table>
 					</div>
-					<div class="col-sm-6" >
+					<div class="col-sm-6">
 					<table>
 						<tr>
-							<td colspan=2>Bank : MEB Bank(NPT)</td>
+							<td style="white-space:nowrap;">Bank :</td>
+							<td style="white-space:nowrap;">MEB Bank(NPT)</td>
 						</tr>
 						<tr>
-							<td colspan=2>Account Number : CF-003638</td>
+							<td style="white-space:nowrap;">Account Number :</td>
+							<td style="white-space:nowrap;">CF-003638</td>
 						</tr>
 						<tr>
-							<td colspan=2>SWIFT : MYEBMMMY</td>
+							<td style="white-space:nowrap;">SWIFT:</td>
+							<td>MYEBMMMY</td>
 						</tr>
 						<tr>
-							<td>Account Number (Foreign Currency) :      </td><td> EDU-400001&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+							<td >Account Number (Foreign Currency) :&nbsp;</td>
+							<td style="white-space:nowrap;">EDU-400001&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 						</tr>
 						<tr>
 							<td colspan=2><hr/></td>
@@ -169,22 +214,169 @@ function myFunction() {
 					
         </div>
       </div>
-
-    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-      <div class="form-group">
-        <form>
-        </form>
-      </div>
-    </div>
-
-    <div class="tab-pane fade" id="employment" role="tabpanel" aria-labelledby="employment-tab">
-      <div class="form-group row"></div>
-      <form>
-<a href="http://rakhine.unionenterprise.org/" target="_blank" >http://rakhine.unionenterprise.org/</a>
-      </form>
-    </div>
-	
-
+	<div class="tab-pane fade show" id="aboutus" role="tabpanel" aria-labelledby="aboutus-tab">
+        <div class="container-fluid"><div  style="padding-bottom: 10px;padding-top: 10px;">
+		This payment gateway is developed by UEHRD.</div>
+		<p style="text-align:  justify;">
+		We are a public-private Union enterprise with three main goals: providing humanitarian assistance, carrying out resettlement and rehabilitation and working for development in Rakhine State.  State Counsellor Daw Aung San Suu Kyi acts as Chairperson and Dr. Win Myat Aye the Union Minister for Social Welfare, Relief and Resettlement acts as Vice Chairman. This Union Enterprise brings together the experience and expertise of the public and private sectors and will be funded by public funds and generous donations from UN agencies, friendly countries, international and regional financial institutions as well as by donors inside the country and those who are living abroad all over the world.  
+		<a href="http://rakhine.unionenterprise.org/" target="_blank" >More... </a>
+		</p>
+		<div class="form-group-row">
+		<div style="padding-bottom: 20px;">		
+		<b>UEHRD စီမံကိန်း Task Force-၉ခုမှ နာယက/အဖွဲ့ခေါင်းဆောင်များ</b></div>
+		<table border='1'>
+			<tr>
+				<th style="width:30px;text-align:  center;">စဉ်</th>
+				<th style=" width:180px; text-align:  center;" id='name'>အမည်</th>
+				<th style="width:50px;text-align:  center;">အဖွဲ့</th>
+				<th style="width:130px;text-align:  center;">ရာထူး</th>
+			</tr>
+			<tr>
+				<td>၁။</td>
+				<td style="white-space:nowrap;">ဒေါက်တာတင်ထွန်းသက်</td>
+				<td style="text-align:  center;">UEHRD</td>
+				<td style="text-align:  center;">ညှိနှိုင်းရေးမှူးချုပ်</td>
+			</tr>
+			<tr>
+				<td>၂။</td>
+				<td>ဦးကျော်ဝင်း</td>
+				<td style="text-align:  center;">CITF</td>
+				<td style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
+			</tr>
+			<tr>
+				<td rowspan='2'>၃။</td>
+				<td >ဦးချစ်ခိုင်</td>
+				<td rowspan='2' style="text-align:  center;">ALTF</td>
+				<td rowspan='2'style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
+			</tr>
+			<tr>
+				<td>ဦးဌေးမြင့်</td>
+			</tr>			
+			<tr>
+				<td>၄။</td>
+				<td>ဦးကိုကိုထွေး</td>
+				<td style="text-align:  center;">DIZTF</td>
+				<td style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
+			</tr>		
+			<tr>
+				<td>၅။</td>
+				<td>ဦးကျော်မြိုင်</td>
+				<td style="text-align:  center;">CIMTF</td>
+				<td style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
+			</tr>		
+			<tr>
+				<td>၆။</td>
+				<td>ဒေါ်ခိုင်ခိုင်နွယ်</td>
+				<td style="text-align:  center;">JVTF</td>
+				<td style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
+			</tr>		
+			<tr>
+				<td>၇။</td>
+				<td>ဒေါက်တာဝင်းစည်သူ</td>
+				<td style="text-align:  center;">HTF</td>
+				<td style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
+			</tr>		
+			<tr>
+				<td>၈။</td>
+				<td>ဦးကျော်လင်း</td>
+				<td style="text-align:  center;">MSTF</td>
+				<td style="text-align:  center;" >အဖွဲ့ခေါင်းဆောင်</td>
+			</tr>		
+			<tr>
+				<td>၉။</td>
+				<td>ဒေါက်တာထွန်းသူရသက်</td>
+				<td style="text-align:  center;">CFTF</td>
+				<td style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
+			</tr>		
+			<tr>
+				<td>၁၀။</td>
+				<td>ဦးရန်ဝင်း</td>
+				<td style="text-align:  center;">TPTF</td>
+				<td style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
+			</tr>
+		</table>
+		
+		<P>
+		<h5>Union Enterprise for Humanitarian Assistance, Resettlement and Development in Rakhine (UEHRD)</h5>
+		<ol type='1'>
+			<li>Construction and Infrastructure Task Force(CITF)</li>
+			<li>Agriculture and Livestock Task Force(ALTF)</li>
+			<li>Development of Industrial Zone Task Force(DIZTF)</li>
+			<li>Communication, Information and Media Task Force(CIMTF)</li>
+			<li>Job creation, opening and running of vocational Training Task Force(JVTF)</li>
+			<li>Healthcare Task Force(HTF)</li>
+			<li>Microfinance support Task Force(MSTF)</li>
+			<li>Crowd funding Task Force(CFTF)</li>
+			<li>Tourism promotion Task Force(TPF)</li>
+		</ol>
+		</p>
+		<div style="padding-bottom: 20px;">		
+		<b>UEHRD စီမံကိန်း Task Force-၉ခုမှ ဆက်သွယ်ရေး တာ၀န်ခံများ</b></div>		
+		<table border='1'>
+			<tr>
+				<th style="width:30px;text-align:  center;">စဉ်</th>
+				<th style="width:180px;text-align:  center;">အမည်</th>
+				<th style="width:50px;text-align:  center;">အဖွဲ့</th>
+				<th style="width:130px;text-align:  center;">ရာထူး</th>
+			</tr>
+			<tr>
+				<td>၁။</td>
+				<td style="white-space:nowrap;">ဦးဇော်မင်းသိန်း</td>
+				<td style="text-align:  center;">CITF</td>
+				<td style="text-align:  center;">အတွင်းရေးမှူး</td>
+			</tr>
+			<tr>
+			<tr>
+				<td>၂။</td>
+				<td>ဦးအောင်မြင့်သိန်း</td>
+				<td style="text-align:  center;">ALTF</td>
+				<td style="text-align:  center;">ဒုတိယအထွေထွေမန်နေဂျာ</td>
+			</tr>
+			<tr>
+				<td >၃။</td>
+				<td >ဦးမောင်မောင်စန်း</td>
+				<td style="text-align:  center;">DIZTF</td>
+				<td style="text-align:  center;">အတွင်းရေးမှူး(၁)</td>
+			</tr>
+			<tr>
+				<td>၄။</td>
+				<td>ဦးကျော်မြိုင်</td>
+				<td style="text-align:  center;">CIMTF</td>
+				<td style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
+			</tr>			
+			<tr>
+				<td>၅။</td>
+				<td>ဦးတင်လှိုင်</td>
+				<td style="text-align:  center;">JVTF</td>
+				<td style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
+			</tr>			
+			<tr>
+				<td>၆။</td>
+				<td>ဒေါက်တာဝင်းစည်သူ</td>
+				<td style="text-align:  center;">HTF</td>
+				<td style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
+			</tr>		
+			<tr>
+				<td>၇။</td>
+				<td>ဦးကျော်လင်း</td>
+				<td style="text-align:  center;">MSTF</td>
+				<td style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
+			</tr>		
+			<tr>
+				<td>၈။</td>
+				<td style="white-space:nowrap;">ဒေါက်တာထွန်းသူရသက်</td>
+				<td style="text-align:  center;">CFTF</td>
+				<td style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
+			</tr>	
+			<tr>
+				<td>၉။</td>
+				<td>ဒေါ်မိုးမိုးလွင်</td>
+				<td style="text-align:  center;">TPTF</td>
+				<td style="text-align:  center;">Executive Officer</td>
+			</tr>		
+		</table>
+		</div>
+			
     </div>
   </form>
 </div>
