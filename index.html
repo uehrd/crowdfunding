@@ -2,13 +2,32 @@
 <head>
   <meta charset="utf-8">  
   
-  <link rel="shortcut icon" href="C:\Users\MIT 182\Desktop\MLMW\Flag_Myanmar.jpg" type="image/x-icon">
+  <link rel="shortcut icon" href="Flag_Myanmar.jpg" type="image/x-icon">
   <title>UEHRD-crowdfunding</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <style>
+@font-face {
+font-family: Unicode;
+src: url("mm3.ttf");
+}
+ 
+.unicode {
+font-family: Unicode;
+}
+ 
+@font-face {
+font-family: ZawgyiOne;
+src: url("ZawgyiOne2008.ttf");
+}
+ 
+.zawgyi {
+font-family: ZawgyiOne;
+}
+</style>
 </head>
 <body>
   <app-root></app-root>
@@ -210,168 +229,282 @@ $("#amount").html("<option value='1,000.00'>1,000.00</option><option value='5,00
 					
         </div>
       </div>
-	<div class="tab-pane fade show" id="aboutus" role="tabpanel" aria-labelledby="aboutus-tab">
-        <div class="container-fluid"><div  style="padding-bottom: 10px;padding-top: 10px;">
-		This payment gateway is developed by UEHRD.</div>
-		<p style="text-align:  justify;">
-		We are a public-private Union enterprise with three main goals: providing humanitarian assistance, carrying out resettlement and rehabilitation and working for development in Rakhine State.  State Counsellor Daw Aung San Suu Kyi acts as Chairperson and Dr. Win Myat Aye the Union Minister for Social Welfare, Relief and Resettlement acts as Vice Chairman. This Union Enterprise brings together the experience and expertise of the public and private sectors and will be funded by public funds and generous donations from UN agencies, friendly countries, international and regional financial institutions as well as by donors inside the country and those who are living abroad all over the world.  
-		<a href="http://rakhine.unionenterprise.org/" target="_blank" >More... </a>
-		</p>
-		<div class="form-group-row">
-		<div style="padding-bottom: 20px;">		
-		<b>UEHRD စီမံကိန်း Task Force-၉ခုမှ နာယက/အဖွဲ့ခေါင်းဆောင်များ</b></div>
-		<table border='1'>
-			<tr>
-				<th style="width:30px;text-align:  center;">စဉ်</th>
-				<th style=" width:180px; text-align:  center;" id='name'>အမည်</th>
-				<th style="width:50px;text-align:  center;">အဖွဲ့</th>
-				<th style="width:130px;text-align:  center;">ရာထူး</th>
-			</tr>
-			<tr>
-				<td>၁။</td>
-				<td style="white-space:nowrap;">ဒေါက်တာအောင်ထွန်းသက်</td>
-				<td style="text-align:  center;">UEHRD</td>
-				<td style="text-align:  center;">ညှိနှိုင်းရေးမှူးချုပ်</td>
-			</tr>
-			<tr>
-				<td>၂။</td>
-				<td>ဦးကျော်ဝင်း</td>
-				<td style="text-align:  center;">CITF</td>
-				<td style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
-			</tr>
-			<tr>
-				<td rowspan='2'>၃။</td>
-				<td >ဦးချစ်ခိုင်</td>
-				<td rowspan='2' style="text-align:  center;">ALTF</td>
-				<td rowspan='2'style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
-			</tr>
-			<tr>
-				<td>ဦးဌေးမြင့်</td>
-			</tr>			
-			<tr>
-				<td>၄။</td>
-				<td>ဦးကိုကိုထွေး</td>
-				<td style="text-align:  center;">DIZTF</td>
-				<td style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
-			</tr>		
-			<tr>
-				<td>၅။</td>
-				<td>ဦးကျော်မြိုင်</td>
-				<td style="text-align:  center;">CIMTF</td>
-				<td style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
-			</tr>		
-			<tr>
-				<td>၆။</td>
-				<td>ဒေါ်ခိုင်ခိုင်နွယ်</td>
-				<td style="text-align:  center;">JVTF</td>
-				<td style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
-			</tr>		
-			<tr>
-				<td>၇။</td>
-				<td>ဒေါက်တာဝင်းစည်သူ</td>
-				<td style="text-align:  center;">HTF</td>
-				<td style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
-			</tr>		
-			<tr>
-				<td>၈။</td>
-				<td>ဦးကျော်လင်း</td>
-				<td style="text-align:  center;">MSTF</td>
-				<td style="text-align:  center;" >အဖွဲ့ခေါင်းဆောင်</td>
-			</tr>		
-			<tr>
-				<td>၉။</td>
-				<td>ဒေါက်တာထွန်းသူရသက်</td>
-				<td style="text-align:  center;">CFTF</td>
-				<td style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
-			</tr>		
-			<tr>
-				<td>၁၀။</td>
-				<td>ဦးရန်ဝင်း</td>
-				<td style="text-align:  center;">TPTF</td>
-				<td style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
-			</tr>
-		</table>
-		
-		
-		<h5 style="padding-top: 20px;">Union Enterprise for Humanitarian Assistance, Resettlement and Development in Rakhine (UEHRD)</h5>
-		<ol type='1'>
-			<li>Construction and Infrastructure Task Force (CITF)</li>
-			<li>Agriculture and Livestock Task Force (ALTF)</li>
-			<li>Development of Industrial Zone Task Force (DIZTF)</li>
-			<li>Communications, Information and Media Task Force (CIMTF)</li>
-			<li>Job creation, opening and running of Vocational Training Task Force (JVTF)</li>
-			<li>Healthcare Task Force (HTF)</li>
-			<li>Microfinance Support Task Force (MSTF)</li>
-			<li>Crowd Funding Task Force (CFTF)</li>
-			<li>Tourism Promotion Task Force (TPTF)</li>
-		</ol>
-		
-		<div style="padding-bottom: 20px;">		
-		<b>UEHRD စီမံကိန်း Task Force-၉ခုမှ ဆက်သွယ်ရေး တာ၀န်ခံများ (Focal Points)</b></div>		
-		<table border='1'>
-			<tr>
-				<th style="width:30px;text-align:  center;">စဉ်</th>
-				<th style="width:180px;text-align:  center;">အမည်</th>
-				<th style="width:50px;text-align:  center;">အဖွဲ့</th>
-				<th style="width:200px;text-align:  center;">ရာထူး</th>
-			</tr>
-			<tr>
-				<td>၁။</td>
-				<td style="white-space:nowrap;">ဦးဇော်မင်းသိန်း</td>
-				<td style="text-align:  center;">CITF</td>
-				<td style="text-align:  center;">အတွင်းရေးမှူး</td>
-			</tr>
-			<tr>
-				<td>၂။</td>
-				<td>ဦးအောင်မြင့်သိန်း</td>
-				<td style="text-align:  center;">ALTF</td>
-				<td style="text-align:  center;">ဒုတိယအထွေထွေမန်နေဂျာ</td>
-			</tr>
-			<tr>
-				<td >၃။</td>
-				<td >ဦးမောင်မောင်စန်း</td>
-				<td style="text-align:  center;">DIZTF</td>
-				<td style="text-align:  center;">အတွင်းရေးမှူး(၁)</td>
-			</tr>
-			<tr>
-				<td>၄။</td>
-				<td>ဦးကျော်မြိုင်</td>
-				<td style="text-align:  center;">CIMTF</td>
-				<td style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
-			</tr>			
-			<tr>
-				<td>၅။</td>
-				<td>ဦးတင်လှိုင်</td>
-				<td style="text-align:  center;">JVTF</td>
-				<td style="text-align:  center;">အတွင်းရေးမှူး</td>
-			</tr>			
-			<tr>
-				<td>၆။</td>
-				<td>ဒေါက်တာဝင်းစည်သူ</td>
-				<td style="text-align:  center;">HTF</td>
-				<td style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
-			</tr>		
-			<tr>
-				<td>၇။</td>
-				<td>ဦးကျော်လင်း</td>
-				<td style="text-align:  center;">MSTF</td>
-				<td style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
-			</tr>		
-			<tr>
-				<td>၈။</td>
-				<td style="white-space:nowrap;">ဒေါက်တာထွန်းသူရသက်</td>
-				<td style="text-align:  center;">CFTF</td>
-				<td style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
-			</tr>	
-			<tr>
-				<td>၉။</td>
-				<td>ဒေါ်မိုးမိုးလွင်</td>
-				<td style="text-align:  center;">TPTF</td>
-				<td style="text-align:  center;">Executive Officer</td>
-			</tr>		
-		</table>
-		</div>
-	</div>	
+	<div class="tab-pane fade show" id="aboutus" role="tabpanel" aria-labelledby="aboutus-tab">	
+					<div class="container-fluid">
+						<div style="padding-bottom: 10px;padding-top: 10px;">
+							This payment gateway is developed by UEHRD.</div>
+						<p style="text-align:  justify;">
+							We are a public-private Union enterprise with three main goals: providing humanitarian assistance, carrying out resettlement
+							and rehabilitation and working for development in Rakhine State. State Counsellor Daw Aung San Suu Kyi acts as Chairperson
+							and Dr. Win Myat Aye the Union Minister for Social Welfare, Relief and Resettlement acts as Vice Chairman. This Union
+							Enterprise brings together the experience and expertise of the public and private sectors and will be funded by public
+							funds and generous donations from UN agencies, friendly countries, international and regional financial institutions
+							as well as by donors inside the country and those who are living abroad all over the world.
+							<br>UEHRD (
+							<a href="http://rakhine.unionenterprise.org/" target="_blank">http://rakhine.unionenterprise.org/</a>)
+						</p>
+						<div class="form-group row row">
+							<div class="col-md-4">
+								<img src="dawaungsansukyi.png" style="height:200px;width:300px" />
+							</div>
+							<div class="col-md-4">
+								<b>Daw Aung San Suu Kyi Chairperson
+									<br> State Counsellor</b>
+							</div>
+						</div>
+						<div class="form-group row row">
+							<div class="col-md-4">
+								<img src="drwinmyataye.jpg" style="height:200px;width:300px" />
+							</div>
+							<div class="col-md-4">
+								<b> Dr. Win Myat Aye Vice-Chairman
+									<br> Union Minister for Social Welfare,
+									<br> Relief and Resettlement </b>
+							</div>
+						</div>
+						<div class="form-group row row">
+							<div class="col-md-4">
+								<img src="draungtunthet.jpg" style="height:200px;width:300px" />
+							</div>
+							<div class="col-md-8">
+								<b> Dr. Aung Tun Thet, Chief Coordinator </b>
+								<br>
+
+								<b> Educational Qualifications </b>
+								<br> B.Com. (Ygn); Post-graduate Diploma in Management Studies (Brighton); M.Sc. (Warwick); Ph.D. (Manchester); Post-Docoral
+								Research Fellow (Marburg); Doctor of Letters (D.Litt.)(Honoris Causa)(Ygn)
+								<br>
+
+								<b> Current Positions </b>
+								<br> Member, Peace Commission
+								<br> Chairman, UN Global Compact Myanmar Network
+								<br> Advisor, UMFCCI
+								<br> Governing Board Member, UNESCO-India Mahatma Gandhi Institute of Education for Peace and Sustainable Development
+								<br> Honorary Professor, University of British Columbia, Vancouver, Canada
+								<br> Visiting Professor, Institute of Religion, Culture and Peace (IRCP), Payap University, Chiang Mai, Thailand
+								<br> Visiting Professor, Yangon University and Yangon University of Economics
+								<br>
+							</div>
+						</div>
+						<div class="form-group-row">
+							<h5 style="padding-top: 20px;">Union Enterprise for Humanitarian Assistance, Resettlement and Development (UEHRD)</h5>
+							<ol type='1'>
+								<li>Construction and Infrastructure Task Force (CITF)</li>
+								<li>Agriculture and Livestock Task Force (ALTF)</li>
+								<li>Development of Industrial Zone Task Force (DIZTF)</li>
+								<li>Communications, Information and Media Task Force (CIMTF)</li>
+								<li>Job creation, opening and running of Vocational Training Task Force (JVTF)</li>
+								<li>Healthcare Task Force (HTF)</li>
+								<li>Microfinance Support Task Force (MSTF)</li>
+								<li>Crowd Funding Task Force (CFTF)</li>
+								<li>Tourism Promotion Task Force (TPTF)</li>
+							</ol>
+							<div style="padding-bottom: 20px;">
+								<b class="unicode">Task Force</b>
+							</div>
+							<table border='1'>
+								<tr>
+									<th style="width:30px;text-align:  center;" class="unicode">စဉ်</th>
+									<th style=" width:180px; text-align:  center;" id='name' class="unicode">အမည်</th>
+									<th style="width:50px;text-align:  center;" class="unicode">အဖွဲ့</th>
+									<th style="width:150px;text-align:  center;" class="unicode">နာယက/အဖွဲ့ခေါင်းဆောင်များ</th>
+									<th style="width:180px;text-align:  center;" class="unicode">ဆက်သွယ်ရေး တာ၀န်ခံများ</th>
+								</tr>
+								<tr>
+									<td>၁။</td>
+									<td style="white-space:nowrap;" class="unicode">ဒေါက်တာအောင်ထွန်းသက်</td>
+									<td style="text-align:  center;">UEHRD</td>
+									<td style="text-align:  center;" class="unicode">ညှိနှိုင်းရေးမှူးချုပ်</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="unicode">၂။</td>
+									<td class="unicode">ဦးကျော်ဝင်း</td>
+									<td style="text-align:  center;">CITF</td>
+									<td style="text-align:  center;" class="unicode">အဖွဲ့ခေါင်းဆောင်</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="unicode">၃။</td>
+									<td style="white-space:nowrap;" class="unicode">ဦးဇော်မင်းသိန်း</td>
+									<td style="text-align:  center;">CITF</td>
+									<td></td>
+									<td style="text-align:  center;" class="unicode">အတွင်းရေးမှူး</td>
+								</tr>
+								<tr>
+									<td class="unicode">၄။</td>
+									<td class="unicode">ဦးချစ်ခိုင်</td>
+									<td style="text-align:  center;">ALTF</td>
+									<td style="text-align:  center;" class="unicode">အဖွဲ့ခေါင်းဆောင်</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="unicode">၅။</td>
+									<td class="unicode">ဦးဌေးမြင့်</td>
+									<td style="text-align:  center;">ALTF</td>
+									<td style="text-align:  center;" class="unicode">အဖွဲ့ခေါင်းဆောင်</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="unicode">၆။</td>
+									<td class="unicode">ဦးအောင်မြင့်သိန်း</td>
+									<td style="text-align:  center;">ALTF</td>
+									<td></td>
+									<td style="text-align:  center;" class="unicode">ဒုတိယအထွေထွေမန်နေဂျာ</td>
+								</tr>
+								<tr>
+									<td class="unicode">၇။</td>
+									<td class="unicode">ဦးကိုကိုထွေး</td>
+									<td style="text-align:  center;">DIZTF</td>
+									<td style="text-align:  center;" class="unicode">အဖွဲ့ခေါင်းဆောင်</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="unicode">၈။</td>
+									<td class="unicode">ဦးမောင်မောင်စန်း</td>
+									<td style="text-align:  center;">DIZTF</td>
+									<td></td>
+									<td style="text-align:  center;" class="unicode">အတွင်းရေးမှူး(၁)</td>
+								</tr>
+								<tr>
+									<td class="unicode">၉။</td>
+									<td class="unicode">ဦးကျော်မြိုင်</td>
+									<td style="text-align:  center;">CIMTF</td>
+									<td style="text-align:  center;" class="unicode">အဖွဲ့ခေါင်းဆောင်</td>
+									<td style="text-align:  center;" class="unicode">အဖွဲ့ခေါင်းဆောင်</td>
+								</tr>
+								<tr>
+									<td class="unicode">၁၀။</td>
+									<td class="unicode">ဒေါ်ခိုင်ခိုင်နွယ်</td>
+									<td style="text-align:  center;">JVTF</td>
+									<td style="text-align:  center;" class="unicode">အဖွဲ့ခေါင်းဆောင်</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="unicode">၁၁။</td>
+									<td class="unicode">ဦးတင်လှိုင်</td>
+									<td style="text-align:  center;">JVTF</td>
+									<td></td>
+									<td style="text-align:  center;" class="unicode">အတွင်းရေးမှူး</td>
+
+								</tr>
+								<tr>
+									<td class="unicode">၁၂။</td>
+									<td class="unicode">ဒေါက်တာဝင်းစည်သူ</td>
+									<td style="text-align:  center;">HTF</td>
+									<td style="text-align:  center;" class="unicode">အဖွဲ့ခေါင်းဆောင်</td>
+									<td style="text-align:  center;" class="unicode">အဖွဲ့ခေါင်းဆောင်</td>
+								</tr>
+								<tr>
+									<td class="unicode">၁၃။</td>
+									<td class="unicode">ဦးကျော်လင်း</td>
+									<td style="text-align:  center;">MSTF</td>
+									<td style="text-align:  center;" class="unicode">အဖွဲ့ခေါင်းဆောင်</td>
+									<td style="text-align:  center;" class="unicode">အဖွဲ့ခေါင်းဆောင်</td>
+								</tr>
+								<tr>
+									<td>၁၄။</td>
+									<td class="unicode">ဒေါက်တာထွန်းသူရသက်</td>
+									<td style="text-align:  center;">CFTF</td>
+									<td style="text-align:  center;" class="unicode">အဖွဲ့ခေါင်းဆောင်</td>
+									<td style="text-align:  center;" class="unicode">အဖွဲ့ခေါင်းဆောင်</td>
+								</tr>
+								<tr>
+									<td class="unicode">၁၅။</td>
+									<td class="unicode">ဦးရန်ဝင်း</td>
+									<td style="text-align:  center;">TPTF</td>
+									<td style="text-align:  center;" class="unicode">အဖွဲ့ခေါင်းဆောင်</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="unicode">၁၆။</td>
+									<td class="unicode">ဒေါ်မိုးမိုးလွင်</td>
+									<td style="text-align:  center;">TPTF</td>
+									<td></td>
+									<td style="text-align:  center;">Executive Officer</td>
+								</tr>
+							</table>
+
+							<!-- <h5 style="padding-top: 20px;">Union Enterprise for Humanitarian Assistance, Resettlement and Development in Rakhine (UEHRD)</h5>
+							<ol type='1'>
+								<li>Construction and Infrastructure Task Force (CITF)</li>
+								<li>Agriculture and Livestock Task Force (ALTF)</li>
+								<li>Development of Industrial Zone Task Force (DIZTF)</li>
+								<li>Communications, Information and Media Task Force (CIMTF)</li>
+								<li>Job creation, opening and running of Vocational Training Task Force (JVTF)</li>
+								<li>Healthcare Task Force (HTF)</li>
+								<li>Microfinance Support Task Force (MSTF)</li>
+								<li>Crowd Funding Task Force (CFTF)</li>
+								<li>Tourism Promotion Task Force (TPTF)</li>
+							</ol>
+							<div style="padding-bottom: 20px;">
+								<b class="unicode">UEHRD စီမံကိန်း Task Force-၉ခုမှ ဆက်သွယ်ရေး တာ၀န်ခံများ (Focal Points)</b>
+							</div>
+							<table border='1'>
+								<tr>
+									<th style="width:30px;text-align:  center;" class="unicode">စဉ်</th>
+									<th style="width:180px;text-align:  center;" class="unicode">အမည်</th>
+									<th style="width:50px;text-align:  center;" class="unicode">အဖွဲ့</th>
+									<th style="width:200px;text-align:  center;" class="unicode">ရာထူး</th>
+								</tr>
+								<tr>
+									<td class="unicode">၁။</td>
+									<td style="white-space:nowrap;" class="unicode">ဦးဇော်မင်းသိန်း</td>
+									<td style="text-align:  center;">CITF</td>
+									<td style="text-align:  center;" class="unicode">အတွင်းရေးမှူး</td>
+								</tr>
+								<tr>
+									<td class="unicode">၂။</td>
+									<td class="unicode">ဦးအောင်မြင့်သိန်း</td>
+									<td style="text-align:  center;">ALTF</td>
+									<td style="text-align:  center;" class="unicode">ဒုတိယအထွေထွေမန်နေဂျာ</td>
+								</tr>
+								<tr>
+									<td class="unicode">၃။</td>
+									<td class="unicode">ဦးမောင်မောင်စန်း</td>
+									<td style="text-align:  center;">DIZTF</td>
+									<td style="text-align:  center;">အတွင်းရေးမှူး(၁)</td>
+								</tr>
+								<tr>
+									<td>၄။</td>
+									<td>ဦးကျော်မြိုင်</td>
+									<td style="text-align:  center;">CIMTF</td>
+									<td style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
+								</tr>
+								<tr>
+									<td>၅။</td>
+									<td>ဦးတင်လှိုင်</td>
+									<td style="text-align:  center;">JVTF</td>
+									<td style="text-align:  center;">အတွင်းရေးမှူး</td>
+								</tr>
+								<tr>
+									<td>၆။</td>
+									<td>ဒေါက်တာဝင်းစည်သူ</td>
+									<td style="text-align:  center;">HTF</td>
+									<td style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
+								</tr>
+								<tr>
+									<td>၇။</td>
+									<td>ဦးကျော်လင်း</td>
+									<td style="text-align:  center;">MSTF</td>
+									<td style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
+								</tr>
+								<tr>
+									<td>၈။</td>
+									<td style="white-space:nowrap;">ဒေါက်တာထွန်းသူရသက်</td>
+									<td style="text-align:  center;">CFTF</td>
+									<td style="text-align:  center;">အဖွဲ့ခေါင်းဆောင်</td>
+								</tr>
+								<tr>
+									<td>၉။</td>
+									<td>ဒေါ်မိုးမိုးလွင်</td>
+									<td style="text-align:  center;">TPTF</td>
+									<td style="text-align:  center;">Executive Officer</td>
+								</tr>
+							</table> -->
+							<div style="padding-bottom: 20px;"></div>
+						</div>
+					</div>
     </div>
   </form>
 </div>
